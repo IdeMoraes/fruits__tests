@@ -8,7 +8,6 @@ export function validateSchemaMiddleware(schema: ObjectSchema) {
     if (validation.error) {
       return res.status(httpStatus.UNPROCESSABLE_ENTITY).send({ error: validation.error.message });
     }
-
     next();
   };
 }

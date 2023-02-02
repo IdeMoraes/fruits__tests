@@ -11,7 +11,6 @@ function getSpecificFruit(id: number) {
   if (!fruit) {
     throw { message: "Fruit not found." }
   }
-
   return fruit;
 }
 
@@ -20,7 +19,6 @@ function createFruit(fruit: FruitInput): void {
   if (fruitAlreadyRegistered) {
     throw { message: "This fruit already exists!" }
   }
-
   fruitsRepository.insertFruit(fruit);
 }
 
